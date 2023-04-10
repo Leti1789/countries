@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import {useState} from 'react'
 import style from './NavBar.module.css'
-import {getCountryByName} from "../../redux/actions/actions"
+import {getCountryByName, getAllCountries} from "../../redux/actions/actions"
 
 const NavBar = () => {
 
@@ -36,7 +36,7 @@ const NavBar = () => {
   return (
     <div className={style.nav}>
       <div className={style.logo}>
-        <Link to="/home" className={style.linkLogo} onClick={()=>window.location.reload()}>
+        <Link to="/home" className={style.linkLogo} onClick={()=>dispatch(getAllCountries())}>
                 <h1>Countries</h1>
                 </Link>
       </div>

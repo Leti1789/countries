@@ -1,0 +1,41 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+
+}
+
+.botonPaginado {
+  background-color: #12232e;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 2px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+button[disabled] {
+  background-color: #707070;
+  cursor: no-drop;
+}
+
+.botonPaginado i {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.inputPaginado {
+  height: 25px;
+  width: 50px;
+  text-align: center;
+  border: 2px solid #12232e;
+  border-radius: 3px;
+}

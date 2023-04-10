@@ -46,7 +46,7 @@ const NavBar = () => {
       </div>
       <div className={style.navLinks}>
             <li className={style.navItems}>
-            <Link className={style.link} to="/home">
+            <Link className={style.link} to="/home" onClick={()=>dispatch(getAllCountries())}>
                 Home
             </Link>
             </li>

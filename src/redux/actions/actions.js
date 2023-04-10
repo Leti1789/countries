@@ -13,11 +13,11 @@ import {
 } from "../actionsTypes/actionsTypes";
 
 //?Me trae todos los paises
-const { REACT_APP_apiURL } = process.env;
+const { REACT_APP_APIURL } = process.env;
 export const getAllCountries = () => {
   return async function (distpach) {
     try {
-      const response = await axios.get(`${REACT_APP_apiURL}/countries`);
+      const response = await axios.get(`${REACT_APP_APIURL}/countries`);
       const countries = response.data;
       return distpach({
         type: GET_ALL_COUNTRIES,
@@ -34,7 +34,7 @@ export const getAllCountries = () => {
 export const getDetailCountry = (id) => {
   return async function (distpach) {
     try {
-      const response = await axios.get(`${REACT_APP_apiURL}/countries/${id}`);
+      const response = await axios.get(`${REACT_APP_APIURL}/countries/${id}`);
       const detailCountry = response.data;
       distpach({
         type: GET_DETAIL_COUNTRY,
@@ -51,7 +51,7 @@ export const getDetailCountry = (id) => {
 export const getActivities = () => {
   return async function (distpach) {
     try {
-      const response = await axios.get(`${REACT_APP_apiURL}/activities`);
+      const response = await axios.get(`${REACT_APP_APIURL}/activities`);
       const activities = response.data;
       return distpach({
         type: GET_ACTIVITIES,
@@ -118,7 +118,7 @@ export const getCountryByName = (name) => {
   return async function (distpach) {
     try {
       const response = await axios.get(
-        `${REACT_APP_apiURL}/countries?name=${name}`
+        `${REACT_APP_APIURL}/countries?name=${name}`
       );
       const country = response.data;
       return distpach({
@@ -136,7 +136,7 @@ export const getCountryByName = (name) => {
 export const postActivity = (body) => {
   return async function (distpach) {
     try {
-      const response = await axios.post(`${REACT_APP_apiURL}/activities`, body);
+      const response = await axios.post(`${REACT_APP_APIURL}/activities`, body);
       return response;
     } catch (error) {
       return error.message;

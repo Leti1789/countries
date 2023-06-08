@@ -1,4 +1,5 @@
 # **COUNTRIES** | Proyecto Individual
+Link al repo de la api: https://github.com/Leti1789/countries-api
 
 ## **📌 OBJETIVOS**
 
